@@ -4,6 +4,7 @@ import { Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
 import "./global.css"
+import AppNavigator from './navigation/AppNavigator';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,13 +34,6 @@ export default function App() {
   }
 
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-5xl text-center font-bold text-primary" style={{ fontFamily: "Quicksand-Bold" }}>
-
-    {/* style={{ fontFamily: "Quicksand-Bold" }} */}
-        Welcome to Nativewind!
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppNavigator />
   );
 }
